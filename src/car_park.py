@@ -26,5 +26,27 @@ class CarPark:
         # Add Display to displays
         elif isinstance(component, Display):
             self.displays.append(component)
-    
-    
+
+    # add Plate number to plates list
+    def add_car(self, plate):
+        self.plates.append(plate)
+        self.update_displays()
+
+    # remove Plate number from plates list
+    def remove_car(self, plate):
+        self.plates.remove(plate)
+        self.update_displays()
+
+    @property
+    def available_bays(self):
+        if(self.capacity - len(self.plates)) >= 0:
+            return self.capacity - len(self.plates)
+        elif(self.capacity - len(self.plates)) < 0:
+            return 0
+
+    def update_displays(self):
+        # dictionary to send information to the displays
+        data = {"available_bays": self.available_bays,
+                "temperature": 25}
+        for display in self.displays:
+            display.update(data)

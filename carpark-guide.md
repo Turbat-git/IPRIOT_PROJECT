@@ -370,11 +370,14 @@ You may want to see the number of available bays, the current temperature, and t
 Now consider, between the `CarPark`, `Sensor`, and `Display` classes, which class is responsible for each piece of information? There's no right or wrong answer here. But you should be able to justify your answer.
 
 >Q. Which class is responsible for the number of available bays (and why)?
->
+>car_park class is responsible for the number of available bays, because the available bays is an attribute to car_park
+> class. And, none of the other two class would be able to fulfill this need.
 >Q. Which class is responsible for the current temperature (and why)?
->
+>sensor class is responsible for the current temperature because sensors would usually gather real-world data through
+> its gadgets, such as cameras, or in this instance, thermostat. 
 >Q. Which class is responsible for the time (and why)?
->
+>display class is responsible for the time because, display is the most similar to a UI and it would make sense to 
+> let the UI be responsible for values such as time.
 --------
 
 ##### Detour: implement available bays
