@@ -21,7 +21,7 @@ class TestCarPark(unittest.TestCase):
 
     def test_remove_car(self):
         self.car_park.add_car("FAKE-001")
-        self.car_park.remove_car("FAKE_001")
+        self.car_park.remove_car("FAKE-001")
         self.assertEqual(self.car_park.plates, [])
         self.assertEqual(self.car_park.available_bays, 100)
 
