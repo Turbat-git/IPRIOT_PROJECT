@@ -457,17 +457,26 @@ Answer the following questions:
 >
 > 1. **Which class is responsible for each of the following pieces of information (and why)?**
 >    - _The number of available bays_
->      `Answer here...`
+>      The car_par class is responsible about the information about the number of available bays. Available_bays data is 
+>    - derived by substracting the occupied_bays from the capacity, both of which are stored in car_park.
 >    - _The current temperature_
->      `Answer here...`
+>      The sensor class is responsible for measuring the current temperature. Neither the car_park or the display class
+>    - has the means to collect real-world data.
 >    - _The time_
->      `Answer here...`
+>      The display class is responsible for displaying the current time to the user. Display is class would be used as a
+>    - UI for the entire application and it would be logical for display class to be responsible for presenting time.
 >
 > 2. **What is the difference between an attribute and a property?**
->    `Answer here...`
+>     The attribute is a variable that is associated with an instance or a class. While property is a special kind of
+>     attribute that allows programmers to encapsulate their code to hide its complexity. While they look very similar
+>     their usage can be different from each other.
+>    
 >
 > 3. **Why do you think we used a dictionary to hold the data we passed the display? List at least one advantage and one disadvantage of this approach.**
->    `Answer here...`
+>     Dictionary allows programmers to store multiple key-value pairs, making it fit for holding the data we passed to the
+>     display. One of the advantages of dictionary is scalability, if we need to add any additional data to pass to display
+>     in the future, we will be able to do that easily by utilizing dictionary's nature. However, the disadvantage of 
+>     dictionary is that it's impossible to check for incorrect types while inputting data, meaning it could throw errors.
 
 #### Add a detect vehicle method to the Sensor class
 
