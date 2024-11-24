@@ -11,3 +11,12 @@ class Display:
     def update(self, data):
         for key, value in data.items():
             print(f"{key}: {value}")
+
+        if "id" in data:
+            self.id = data["id"]
+        if "message" in data:
+            self.message= data["message"]
+        if "is_on" in data:
+            self.is_on = data["is_on"]
+        if "car_park" in data:
+            self.car_park = data["car_park"]
