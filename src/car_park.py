@@ -7,9 +7,9 @@ import json
 
 class CarPark:
     # initializing CarPark class
-    def __init__(self, location = "Unknown", capacity = 100, plates = None, sensors = None, displays = None, log_file = Path("log.txt")):
-        self.location = location or []
-        self.capacity = capacity or []
+    def __init__(self, location = "Unknown", capacity = 100, plates = [], sensors = None, displays = None, log_file = Path("log.txt")):
+        self.location = location
+        self.capacity = capacity
         self.plates = plates or []
         self.sensors = sensors or []
         self.displays = displays or []
@@ -52,8 +52,7 @@ class CarPark:
 
     def update_displays(self):
         # dictionary to send information to the displays
-        data = {"available_bays": self.available_bays,
-                "temperature": 25}
+        data = {"available_bays": self.available_bays}
         for display in self.displays:
             display.update(data)
 

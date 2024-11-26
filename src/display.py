@@ -1,5 +1,5 @@
 class Display:
-    def __init__(self, id = id, message = "Welcome to the car park", is_on = None, car_park = None):
+    def __init__(self, id, message = "Welcome to the car park", is_on = None, car_park = None):
         self.id = id
         self.message = message
         self.is_on = is_on

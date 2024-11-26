@@ -73,8 +73,5 @@ class TestCarPark(unittest.TestCase):
         self.assertIn("exited", last_line)  # check description
         self.assertIn("\n", last_line)  # check entry has a new line
 
-
-
-
 if __name__ == "__main__":
     unittest.main()

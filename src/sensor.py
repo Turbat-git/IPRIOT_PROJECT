@@ -1,7 +1,5 @@
 from abc import ABC, abstractmethod
 import random
-from unittest.mock import sentinel
-
 
 class Sensor(ABC):
     # initializing Sensor class
