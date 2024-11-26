@@ -4,7 +4,7 @@ from pathlib import Path
 
 class TestCarPark(unittest.TestCase):
     def setUp(self):
-        self.car_park = CarPark("123 Example Street", 100)
+        self.car_park = CarPark("123 Example Street", 100, )
 
     def test_car_space_initialized_with_all_attributes(self):
         self.assertIsInstance(self.car_park, CarPark)
@@ -72,6 +72,9 @@ class TestCarPark(unittest.TestCase):
         self.assertIn("NEW-001", last_line)  # check plate entered
         self.assertIn("exited", last_line)  # check description
         self.assertIn("\n", last_line)  # check entry has a new line
+
+
+
 
 if __name__ == "__main__":
     unittest.main()
